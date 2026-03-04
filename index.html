@@ -625,4 +625,612 @@
         #scrollToTop:hover {
             background: var(--primary);
             transform: translateY(-5px);
- 
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-buttons { flex-direction: column; }
+            .trust-indicators { flex-direction: column; gap: 1rem; }
+        }
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-links {
+                position: fixed;
+                top: var(--nav-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--nav-height));
+                background: var(--bg-base);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: 0.3s ease-in-out;
+            }
+            .nav-links.active { left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"></span>
+                YT ReVanced Live
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-item">Home</a></li>
+                <li><a href="#download" class="nav-item">Download</a></li>
+                <li><a href="#extended" class="nav-item">Extended</a></li>
+                <li><a href="#features" class="nav-item">Features</a></li>
+                <li><a href="#screenshots" class="nav-item">Screenshots</a></li>
+                <li><a href="#installation" class="nav-item">Installation</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section">
+            <div class="container">
+                <div class="hero-content scroll-reveal">
+                    <span class="badge">Version 20.14.43 Available</span>
+                    <h1>Download YouTube ReVanced APK</h1>
+                    <p>Experience the ultimate ad-free streaming experience. Background play, SponsorBlock, Return YouTube Dislike, and premium features—all in one clean, community-driven application.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary ripple-btn">Download Latest APK</a>
+                        <a href="#installation" class="btn btn-secondary ripple-btn">Read Install Guide</a>
+                    </div>
+                    
+                    <div class="trust-indicators">
+                        <span>Safe & Secure</span>
+                        <span>Clean APKs</span>
+                        <span>Community Driven</span>
+                    </div>
+                </div>
+                <div class="mockup-container scroll-reveal">
+                    </div>
+            </div>
+        </section>
+
+        <section id="download" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">📥 Download ReVanced</h2>
+                <div class="text-center scroll-reveal" style="max-width: 800px; margin: 0 auto 3rem;">
+                    <p>The simplest way is to download Community ReVanced Manager and use it to install, manage, and update other ReVanced applications with user-friendly features designed for non-technical users.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div>
+                            <div class="dl-header">
+                                <h3>ReVanced Manager</h3>
+                                <span class="dl-version">v3.0.22</span>
+                            </div>
+                            <p class="dl-meta">Size: 22 MB | Updated: Today</p>
+                            <p>The recommended way to patch and install ReVanced apps directly on your device.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary ripple-btn" style="width:100%; margin-top:1rem;">Download Manager</a>
+                    </div>
+
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div>
+                            <div class="dl-header">
+                                <h3>YouTube ReVanced</h3>
+                                <span class="dl-version">v20.14.43</span>
+                            </div>
+                            <p class="dl-meta">Size: 145 MB | Pre-built APK</p>
+                            <p>Pre-patched ready to install. Requires MicroG for Google Account login.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary ripple-btn" style="width:100%; margin-top:1rem;">Download APK</a>
+                    </div>
+
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div>
+                            <div class="dl-header">
+                                <h3>ReVanced Music</h3>
+                                <span class="dl-version">v8.10.52</span>
+                            </div>
+                            <p class="dl-meta">Size: 68 MB | Pre-built APK</p>
+                            <p>Ad-free music streaming with background play enabled globally.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary ripple-btn" style="width:100%; margin-top:1rem;">Download Music</a>
+                    </div>
+
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div>
+                            <div class="dl-header">
+                                <h3>MicroG</h3>
+                                <span class="dl-version">v0.3.13.2.250932</span>
+                            </div>
+                            <p class="dl-meta">Required for Non-Root Users</p>
+                            <p>Essential framework element to allow Google Account login on ReVanced apps safely.</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary ripple-btn" style="width:100%; margin-top:1rem;">Download MicroG</a>
+                    </div>
+                </div>
+
+                <div class="text-center scroll-reveal" style="margin-top: 3rem;">
+                    <p>Looking for older versions? <a href="#">Archive</a> | Want to build your own custom APK? <a href="#">Guide</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="extended" class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="scroll-reveal">🌟 YouTube ReVanced Extended</h2>
+                <div class="text-center scroll-reveal" style="max-width: 800px; margin: 0 auto 3rem;">
+                    <p>ReVanced Extended (RVX) is a fork of the original ReVanced project featuring additional customization options, unique patches, and experimental features.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div class="dl-header">
+                            <h3>RVX YT Extended</h3>
+                            <span class="dl-version">v20.05.46</span>
+                        </div>
+                        <p>Features extra settings, advanced material you theming, and specific UI tweaks not found in standard ReVanced.</p>
+                        <a href="#" class="btn btn-primary ripple-btn" style="margin-top:1rem;">Download RVX</a>
+                    </div>
+                    <div class="glass glass-card dl-card scroll-reveal">
+                        <div class="dl-header">
+                            <h3>RVX YT Music Extended</h3>
+                            <span class="dl-version">v8.30.54</span>
+                        </div>
+                        <p>Enhanced music experience with exclusive patches like custom bitrates and forced high-quality audio.</p>
+                        <a href="#" class="btn btn-primary ripple-btn" style="margin-top:1rem;">Download RVX Music</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screenshots" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">📱 App Screenshots</h2>
+                <div class="screenshots-grid scroll-reveal">
+                    <div class="screenshot-item"><img src="screenshot1.jpg" alt="ReVanced Home Screen Layout" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="screenshot-item"><img src="screenshot2.jpg" alt="ReVanced Video Player with SponsorBlock" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="screenshot-item"><img src="screenshot3.jpg" alt="ReVanced Settings Menu" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="screenshot-item"><img src="screenshot4.jpg" alt="Return YouTube Dislike integration" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="screenshot-item"><img src="screenshot5.jpg" alt="ReVanced Background Play feature" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="screenshot-item"><img src="screenshot6.jpg" alt="ReVanced Music Interface" loading="lazy" onerror="this.style.display='none'"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="scroll-reveal">✨ Ultimate Features</h2>
+                <div class="grid-3">
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">🚫</div>
+                        <h3>Ad-Free Experience</h3>
+                        <p>Block all general and video ads entirely. Enjoy uninterrupted viewing without annoying interruptions.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">🎧</div>
+                        <h3>Background Play</h3>
+                        <p>Play videos in the background or with your screen turned off. Perfect for podcasts and music.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">⏭️</div>
+                        <h3>SponsorBlock</h3>
+                        <p>Automatically skip sponsor segments, intros, outros, and non-music sections in videos.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">👎</div>
+                        <h3>Return Dislike</h3>
+                        <p>Bring back the dislike counter on all videos to quickly evaluate content quality.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Custom Themes</h3>
+                        <p>Apply true AMOLED dark mode to save battery, or use Material You dynamic theming.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">👆</div>
+                        <h3>Swipe Controls</h3>
+                        <p>Control brightness and volume seamlessly by swiping on the left or right side of the video player.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">⏬</div>
+                        <h3>Downloads Integration</h3>
+                        <p>Hook up your favorite external downloader (like NewPipe) directly into the app UI.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">🖼️</div>
+                        <h3>PiP Mode</h3>
+                        <p>Picture-in-Picture mode allows you to watch videos in a floating window while using other apps.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Playback Speed</h3>
+                        <p>Force specific video qualities and set default custom playback speeds for all videos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="other-apps" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">📦 Other Supported Apps</h2>
+                <div class="grid-3">
+                    <div class="glass glass-card scroll-reveal">
+                        <h3>ReVanced Reddit</h3>
+                        <p class="dl-meta">v2024.12.0</p>
+                        <p>No ads, premium icons unlocked.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <h3>ReVanced TikTok</h3>
+                        <p class="dl-meta">v34.1.3</p>
+                        <p>Ad-free, download videos without watermark.</p>
+                    </div>
+                    <div class="glass glass-card scroll-reveal">
+                        <h3>ReVanced Twitter/X</h3>
+                        <p class="dl-meta">v10.32.0</p>
+                        <p>Hide ads, remove promoted content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proxy" class="section" style="background: rgba(59, 130, 246, 0.05);">
+            <div class="container text-center">
+                <h2 class="scroll-reveal">🔐 Free Telegram Proxy</h2>
+                <div class="glass glass-card scroll-reveal" style="max-width: 600px; margin: 0 auto;">
+                    <p>Bypass censorship and connect to Telegram securely using our high-speed MTProto proxy network.</p>
+                    <ul style="list-style:none; display:flex; justify-content:center; gap:1.5rem; margin: 1.5rem 0;">
+                        <li>✅ Secure</li>
+                        <li>⚡ Fast</li>
+                        <li>🌍 Global</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary ripple-btn">Connect to Proxy</a>
+                    <p style="font-size:0.8rem; margin-top:1rem;">*This is a free community service.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="installation" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">🛠 Step-by-Step Installation Guide</h2>
+                <div class="install-steps">
+                    <div class="step scroll-reveal">
+                        <div class="step-number">1</div>
+                        <div class="glass glass-card" style="flex: 1;">
+                            <h3>Install MicroG</h3>
+                            <p>If your phone is not rooted, you must install MicroG first. This acts as a bridge to allow you to log into your Google Account safely. Download and install the APK, and make sure it runs in the background.</p>
+                        </div>
+                    </div>
+                    <div class="step scroll-reveal">
+                        <div class="step-number">2</div>
+                        <div class="glass glass-card" style="flex: 1;">
+                            <h3>Allow Unknown Sources</h3>
+                            <p>Go to your phone's Settings > Security > Install unknown apps. Grant permission to your browser or file manager so you can install the downloaded APKs.</p>
+                        </div>
+                    </div>
+                    <div class="step scroll-reveal">
+                        <div class="step-number">3</div>
+                        <div class="glass glass-card" style="flex: 1;">
+                            <h3>Install ReVanced Manager OR APK</h3>
+                            <p>Either install the pre-built YouTube ReVanced APK directly, or install ReVanced Manager to patch the official YouTube app on your own device.</p>
+                        </div>
+                    </div>
+                    <div class="step scroll-reveal">
+                        <div class="step-number">4</div>
+                        <div class="glass glass-card" style="flex: 1;">
+                            <h3>Login & Enjoy</h3>
+                            <p>Open the app. It will connect through MicroG automatically. Sign in with your Google account and configure your settings (like SponsorBlock preferences).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="changelog" class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="scroll-reveal">📊 Update Log & Changelog</h2>
+                <div class="timeline">
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">March 2026</span>
+                        <div class="glass glass-card">
+                            <h3>Version 20.14.43</h3>
+                            <ul>
+                                <li>Updated base YouTube version.</li>
+                                <li>Fixed buffering issues for specific regions.</li>
+                                <li>Improved SponsorBlock auto-skip delay.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">February 2026</span>
+                        <div class="glass glass-card">
+                            <h3>Version 20.08.32</h3>
+                            <ul>
+                                <li>Added new patches for Shorts layout hiding.</li>
+                                <li>Fixed Return YouTube Dislike API limits.</li>
+                                <li>Updated MicroG signature spoofing compatibility.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">👥 About YT ReVanced Live</h2>
+                <div class="glass glass-card scroll-reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p>YT ReVanced Live is a community-driven platform established to provide safe, clean, and easily accessible ReVanced APK distributions. We believe in transparency and the open-source ethos.</p>
+                    <p><strong>Disclaimer:</strong> This website serves purely educational purposes. We are not affiliated with Google LLC, YouTube, or the official ReVanced development team. All trademarks belong to their respective owners.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">📞 Contact Us</h2>
+                <div class="glass glass-card scroll-reveal" style="max-width: 600px; margin: 0 auto;">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent (Frontend Demo)');">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary ripple-btn" style="width: 100%;">Send Message</button>
+                    </form>
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <p>Security disclosure: <a href="mailto:security@ytrevanced.live">security@ytrevanced.live</a></p>
+                        <div style="display:flex; justify-content:center; gap:1rem; font-size: 1.5rem;">
+                            <a href="#" aria-label="Telegram">📱</a>
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="GitHub">💻</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="scroll-reveal">❓ Frequently Asked Questions</h2>
+                <div class="accordion scroll-reveal">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Is YouTube ReVanced safe to use?</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">Yes. The patches are open-source, and building the APK yourself using the ReVanced Manager guarantees it is safe. Our pre-built APKs are compiled directly from the official source without any hidden modifications.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Do I need a rooted device?</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">No, root is not required. Non-rooted users simply need to install MicroG alongside ReVanced to enable Google Account sign-in capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Why is my video buffering infinitely?</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">This is a known issue caused by YouTube's backend changes. Ensure you are using the latest version of ReVanced and MicroG. Sometimes enabling the "Spoof App Version" toggle in ReVanced settings fixes this instantly.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">What is the difference between ReVanced and Extended (RVX)?</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">ReVanced is the core official project. RVX (Extended) is a fork created by independent developers that includes extra community-requested features and patches that the official team rejected or hasn't implemented yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legal" class="section">
+            <div class="container">
+                <h2 class="scroll-reveal">⚖ Legal & Policies</h2>
+                <div class="accordion scroll-reveal">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Disclaimer</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">This site is an unofficial repository for educational purposes. We do not host modified proprietary binaries natively but provide patches/compiled versions under fair use. Not affiliated with Google LLC.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Privacy Policy</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">We do not collect personal data. The site is purely static HTML. Any form submissions are handled strictly for support purposes and are not shared with third parties.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">DMCA Policy</div>
+                        <div class="accordion-content">
+                            <p style="padding-top:1rem;">If you believe your copyrighted work has been infringed, please contact us via our security email. Since we link to open-source patchers, please direct patch-specific takedowns to the respective GitHub repositories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>YT ReVanced Live</h4>
+                    <p style="font-size: 0.9rem;">The ultimate hub for clean, safe, and up-to-date ReVanced software.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#download">Downloads</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#changelog">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#installation">Install Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#legal">Privacy Policy</a></li>
+                        <li><a href="#legal">Terms & Conditions</a></li>
+                        <li><a href="#legal">DMCA</a></li>
+                        <li><a href="sitemap.xml" rel="noopener noreferrer">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 YT ReVanced Live. All rights reserved. Not affiliated with YouTube or Google LLC.
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Mobile Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-item');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 2. Sticky Header Effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Scroll to Top Button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 4. Accordion Logic (FAQ & Legal)
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const content = item.querySelector('.accordion-content');
+                    
+                    // Close others in same group (optional, let's keep it standard toggle)
+                    const isActive = item.classList.contains('active');
+                    
+                    document.querySelectorAll('.accordion-item').forEach(accItem => {
+                        // Optional: close other items to keep it clean. Uncomment below to enable.
+                        // accItem.classList.remove('active'); 
+                        // accItem.querySelector('.accordion-content').style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        item.classList.remove('active');
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+
+            // 5. Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Run once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // 6. Ripple Effect for Buttons
+            const buttons = document.querySelectorAll('.ripple-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // Prevent href jump temporarily for animation if it's not # download
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
